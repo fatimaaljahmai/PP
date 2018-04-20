@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="processing.js"></script>
+		<style>
+			html,body {
+				margin: 0px;
+			}
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow-y: hidden;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<canvas id="sphere2" onclick="showInside()" data-processing-sources="sphere2.pde"></canvas>
+		<canvas id="sphere1" onclick="showOutside()" style="display: none;" data-processing-sources="sphere1.pde"></canvas>
+		<script>
+			function showOutside() {
+				document.getElementById("sphere2").style.display = "block";
+				document.getElementById("sphere1").style.display = "none";
+			}
+			
+			function showInside() {
+				document.getElementById("sphere2").style.display = "none";
+				document.getElementById("sphere1").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
